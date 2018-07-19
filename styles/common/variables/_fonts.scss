@@ -1,0 +1,69 @@
+@font-face { //--- Titillium Web Light
+  font-family: "Titillium web";
+  src: url($font-path + 'TitilliumWeb-Light.eot');
+  src: url($font-path + 'TitilliumWeb-Light.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'TitilliumWeb-Light.woff') format('woff'),
+       url($font-path + 'TitilliumWeb-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face { //--- Titillium Web Regular
+  font-family: "Titillium web";
+  src: url($font-path + 'TitilliumWeb-Regular.eot');
+  src: url($font-path + 'TitilliumWeb-Regular.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'TitilliumWeb-Regular.woff') format('woff'),
+       url($font-path + 'TitilliumWeb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { //--- Titillium Web SemiBold
+  font-family: "Titillium web";
+  src: url($font-path + 'TitilliumWeb-SemiBold.eot');
+  src: url($font-path + 'TitilliumWeb-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'TitilliumWeb-SemiBold.woff') format('woff'),
+       url($font-path + 'TitilliumWeb-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face { //--- itillium Web Bold
+  font-family: "Titillium web";
+  src: url($font-path + 'TitilliumWeb-Bold.eot');
+  src: url($font-path + 'TitilliumWeb-Bold.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'TitilliumWeb-Bold.woff') format('woff'),
+       url($font-path + 'TitilliumWeb-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face { //--- Oswald Light
+  font-family: "Oswald";
+  src: url($font-path + 'Oswald-Light.eot');
+  src: url($font-path + 'Oswald-Light.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'Oswald-Light.woff') format('woff'),
+       url($font-path + 'Oswald-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face { //--- Oswald Regular
+  font-family: "Oswald";
+  src: url($font-path + 'Oswald-Regular.eot');
+  src: url($font-path + 'Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'Oswald-Regular.woff') format('woff'),
+       url($font-path + 'Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { //--- Oswald Medium
+  font-family: "Oswald";
+  src: url($font-path + 'Oswald-Medium.eot');
+  src: url($font-path + 'Oswald-Medium.eot?#iefix') format('embedded-opentype'),
+       url($font-path + 'Oswald-Medium.woff') format('woff'),
+       url($font-path + 'Oswald-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

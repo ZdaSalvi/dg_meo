@@ -1,0 +1,257 @@
+.article {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Titillium Web";
+
+	.article-image {
+		overflow: hidden;
+
+		.illustration {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.article-inner {	
+		@extend %article;
+
+		.thematic {
+			margin-bottom: 14px;
+			@include font-size(10px);
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+			
+		.title {
+			@include font-size(24px);
+			line-height: 1.30;
+		}
+	
+		.description {
+			margin-top: 12px;
+			@include font-size(13px);
+			font-weight: 300;
+			line-height: 1.35;
+		}
+
+		.view-more {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;			
+			padding: 5px 5px 5px 0;
+			border: 0;
+			background: none;
+			font-family: "Titillium web";
+			color: $mc-white;
+			@include font-size(11px);
+			line-height: 1.5;
+			text-transform: uppercase;
+			font-weight: 600;
+			@include transition(all 1s ease-in-out);
+	
+			&::before {
+				content: '';
+				display: inline-flex;
+				height: 14px;
+				width: 24px;
+				margin-right: 8px;
+				background: transparent url($img-path+ 'icons/view-more-white.svg') no-repeat center center;
+				@include transition(transform 0.2s ease-in-out);
+			}
+
+			&:hover {
+				&::before {
+					@include transform(scale(1.1));
+				}
+			}
+		}
+
+		@include for-desktop {
+			.thematic {
+				margin-bottom: 10px;
+				@include font-size(10px);
+				line-height: rem(17px);
+			}
+					
+			.title {
+				@include font-size(32px);
+				line-height: rem(39px);
+			}
+	
+			.description {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				@include font-size(16px);
+				line-height: rem(20px);
+			}
+			
+			.view-more {
+				margin-top: auto;
+				@include font-size(11px);
+				line-height: rem(18px);
+			}
+		}
+	}	
+	
+	//--- Article principal (n°1)
+	&.main {
+		flex-basis: 100%;
+		color: $mc-white;
+		min-height: 300px;
+		background-size: cover;
+		@include grey-overlay();
+		margin-bottom: 10px;
+
+		.article-inner {
+			width: 80%;
+			margin-bottom: 30px;
+		}
+
+		@include for-tablet {
+			min-height: 280px;
+			@include white-shape(95%, 85px, -4deg);
+		}
+
+		@include for-tablet-and-upper {
+			align-items: flex-start;
+			margin: 0;
+
+			.article-inner {
+				margin: 35px 0 0;
+			}
+		}
+
+		@include for-desktop {
+			min-height: 343px;
+			@include white-shape(90%, 136px, -5.5deg);
+
+			.article-inner {
+				width: 61%;
+				min-height: 220px;
+			}
+		}
+	}
+
+	//--- Articles secondaires (2 & 3)
+	&.secondary {
+		flex-basis: calc(100% - 40px);
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 10px auto;
+		max-width: 450px;
+
+		.article-image {
+			position: relative;
+			height: 170px;
+			width: 100%;
+			background: #f1f1f1;
+
+			.illustration {
+				position: absolute;
+				width: 100%;
+				height: auto;
+				top: 50%;
+				@include transform(translate(0, -50%));
+			}
+		}
+
+		.article-inner {
+			margin-top: 10px;
+			padding-right: 10px;
+
+			.view-more {
+				color: $mc-grey;
+
+				&::before {
+					background-image: url($img-path+ 'icons/view-more-green.svg')
+				}
+			}
+		}
+
+		@include for-tablet-and-upper {
+			align-items: flex-end;
+			justify-content: flex-start;
+			max-width: none;
+		}
+
+		@include for-tablet {	
+			.article-image {
+				display: flex;
+				align-items: flex-end;
+				height: 200px;			
+				@include white-shape(90%, 50px, -4.5deg);
+
+				.illustration {
+					position: relative;
+					top: 0;
+					@include transform(none);
+				}
+			}
+
+			.article-inner {
+				top: -10px;
+				width: 86%;
+			}
+
+			&.left {
+				flex-basis: 44%;
+				margin: 0 0 0 7%;
+				padding-right: 10px;
+			}
+	
+			&.right {
+				flex-basis: 44%;
+				margin: 0 5% 0 0;
+				padding-left: 10px;
+			}
+		}
+
+		@include for-desktop {
+			.article-image {
+				.illustration {
+					height: 100%;
+					width: auto;
+				}
+			}
+
+			.article-inner {
+				margin-top: 0;
+			}
+
+			&.left {
+				flex-basis: 44%;
+				margin: 0 0 0 13%;
+
+				.article-image {
+					min-height: 330px;
+					@include white-shape(86%, 73px, -5deg);
+				}
+
+				.article-inner {
+					top: -11px;
+					width: calc(86% - 18px);			
+				}
+			}
+		
+			&.right {
+				flex-basis: 32%;
+				margin: 0;
+				padding-top: 55px;
+				padding-left: 20px;
+				
+				.article-image {
+					min-height: 273px;
+					@include white-shape(83%, 50px, -4.5deg);
+				}
+		
+				.article-inner {
+					top: -7px;
+					width: calc(83% - 18px);
+				}
+			}
+		}
+	}
+}

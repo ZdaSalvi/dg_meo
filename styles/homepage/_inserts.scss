@@ -1,0 +1,105 @@
+.homepage-insert {
+  margin: 35px 0 15px;
+
+  .insert-title {
+    @include font-size(32px);
+    line-height: rem(40px);
+    font-family: "Oswald";
+    font-weight: 300;
+		text-align: center;
+		letter-spacing: 0.2px;
+
+    .highlighted {
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  .insert-subtitle {
+		padding: 0 20px;
+		font-family: "Titillium web";
+		@include font-size(15px);
+		line-height: rem(20px);
+		text-align: center;
+	}
+
+	.insert-content {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-top: 18px;
+		z-index: 0;
+	}
+
+	.view-all {
+		align-self: flex-end;
+		display: flex;
+		align-items: center;
+		margin: 10px auto;
+		padding: 5px 15px;
+		border: 1px solid $mc-green;
+		background: none;
+		font-family: "Titillium web";
+		color: $mc-grey;
+		@include font-size(11px);
+		line-height: 1.5;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 600;
+		@include transition(all 0.3s ease-in-out);
+
+		&:hover,
+		&:active {
+			background: $mc-light-green;
+		}
+	}
+
+	&.inspirations {
+		.main {
+			background: transparent url($img-path+ 'illustration2.png') center center;
+		}
+	}
+
+	&.realisations {
+		.main {
+			background: transparent url($img-path+ 'longere-bretonne.jpg') center center;
+		}
+	}
+
+	@include for-tablet-and-upper {
+		margin: 40px $gutter-width 25px;
+
+		.insert-content {
+			position: relative;
+			flex-direction: row;
+		}
+
+		.view-all {
+			position: absolute;
+			right: 5%;
+			top: 230px;
+		}
+	}
+	
+	@include for-desktop {
+		margin: 85px 0 30px;
+
+		.insert-title {
+			@include font-size(45px);
+			line-height: rem(50px);
+		}
+
+		.insert-subtitle {
+			@include font-size(17px);
+			line-height: rem(20px);
+		}
+
+		.view-all {
+			position: absolute;
+			right: 11%;
+			top: 333px;
+		}
+	}
+}
+
+  

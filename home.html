@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Méo - Page d'accueil</title>
+  <link rel="stylesheet" href="styles/index.css" media="all">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo MéO" />
+    </div>
+    <nav class="secondary-menu menu" aria-label="Menu secondaire">
+      <form role="search">
+        <input class="search" type="text" id="search" name="search" minlength="4" maxlength="8" placeholder="Votre recherche" />
+      </form>
+      <ul class="list-item">
+        <li class="item"><a class="contact" href="#">Contactez-nous</a></li>
+        <li class="item"><a class="fitters" href="#">Espace installateur</a></li>
+        <li class="item"><a class="prescribers" href="#">Espace prescripteur</a></li>
+      </ul>
+    </nav>
+    <nav id="main-menu" class="main-menu menu" aria-label="Menu principal">
+      <ul class="list-item">
+        <li class="item"><a href="#">Inspirations</a></li>
+        <li class="item"><a href="#">Guide projet</a></li>
+        <li class="item"><a href="#">Fenêtres</a></li>
+        <li class="item"><a href="#">Portes d'entrées</a></li>
+        <li class="item"><a href="#">Verrières et vérandas</a></li>
+        <li class="item"><a href="#">Menuisiers d'excellence</a></li>
+        <li class="item"><a href="#">MC France</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">    
+    <section class="homepage-carousel"></section>
+    <section class="homepage-insert inspirations">
+      <h2 class="insert-title">MéO, <span class="highlighted">Inspirations</span></h2>
+      <div class="insert-subtitle">Lorem ipsum dolor sit tamet, consectetur adipiscing elit. Nulla vulputate ultrices est.</div>
+      <div class="insert-content">
+        <div class="article main">
+          <div class="article-inner">
+            <div class="thematic">In&Out</div>
+            <h3 class="title"><span class="highlighted">In : Bois & Béton</span><br>Contraste réussi pour un style urban lively</h3>
+            <div class="description">Lorem ipsum dolor sit tamet, consectetur adipiscing elit</div>
+            <button class="view-more" aria-label="Lire la suite de l'article In : Bois & Beton">En savoir plus</button>
+          </div>
+        </div>
+        <div class="article secondary left">
+          <div class="article-image">
+            <img class="illustration" src="img/illustration3.png" alt="" />
+          </div>
+          <div class="article-inner">
+            <div class="thematic">Tendance</div>
+            <h3 class="title">Cet hiver, passez au vert</h3>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus nisl, condimentum tincidunt enim non, placerat aliquam nisi. Vestibulum ante ipsum primis in faucibus orci luctus.</div>
+            <button class="view-more" aria-label="Consulter le nuancier de couleurs MéO">Consulter le nuancier Méo</button>
+          </div>
+        </div>
+        <div class="article secondary right">
+          <div class="article-image">
+            <img class="illustration" src="img/illustration4.png" alt="" />
+          </div>
+          <div class="article-inner">
+            <div class="thematic">Lifestyle</div>
+            <h3 class="title">Osez les verrières</h3>
+            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tellus nisl, condimentum tincidunt enim non, placerat aliquam nisi. Vestibulum ante ipsum primis in faucibus orci luctus.</div>
+            <button class="view-more" aria-label="Voir toutes les verrières MéO">Voir les produits</button>
+          </div>
+        </div>
+        <button class="view-all" aria-label="Voir l'ensemble des articles de la thématique inspirations">Voir toutes les inspirations</button>
+      </div>
+    </section>
+
+    <section class="homepage-insert realisations">
+      <h2 class="insert-title">MéO, <span class="highlighted">Réalisations</span></h2>
+      <div class="insert-subtitle">Lorem ipsum dolor sit tamet, consectetur adipiscing elit. Nulla vulputate ultrices est.</div>
+      <div class="insert-content">
+        <div class="article main">
+          <div class="article-inner">
+            <div class="thematic">Portfolio</div>
+            <h3 class="title"><span class="highlighted">Avant / Après :</span> Rénovation d'une longère bretonne</h3>
+            <div class="description">Lorem ipsum dolor sit tamet, consectetur adipiscing elit</div>
+            <button class="view-more" aria-label="Lire la suite de l'article Rénovation d'une longère bretonne">En savoir plus</button>
+          </div>
+        </div>
+        <button class="view-all" aria-label="Voir l'ensemble des articles de la thématique réalisations">Voir toutes les réalisations</button>
+      </div>
+    </section>
+  </main>
+</html>

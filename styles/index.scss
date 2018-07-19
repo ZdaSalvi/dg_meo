@@ -1,0 +1,23 @@
+
+//--- Variables
+@import 'common/variables/variables';
+@import 'common/variables/colors';
+@import 'common/variables/fonts';
+@import 'common/variables/breakpoints';
+
+//--- Utils
+@import 'common/utils/reset';
+@import 'common/utils/mixins';
+@import 'common/utils/placeholders';
+@import 'common/utils/functions';
+
+//--- Base
+@import 'common/base';
+
+//--- Styles
+@import 'header/base';
+@import 'header/menu';
+@import 'homepage/base';
+@import 'homepage/carousel';
+@import 'homepage/inserts';
+@import 'homepage/articles';

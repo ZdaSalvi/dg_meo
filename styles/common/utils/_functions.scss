@@ -1,0 +1,5 @@
+//** Function to convert px to rem
+@function rem($size) {
+  $rem-size: $size / $font-size-base;
+  @return #{$rem-size}rem;
+}

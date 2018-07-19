@@ -1,0 +1,59 @@
+//--- Common base
+//--- Transform cross-browser compatible
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+		-o-transform: $transforms;
+	 -ms-transform: $transforms;
+-webkit-transform: $transforms;
+			 transform: $transforms;
+}
+
+//--- Transition cross-browser compatible
+@mixin transition($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}
+
+//--- Project
+//--- Mixin to convert px to rem
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
+}
+
+//--- White shape on pictures
+@mixin white-shape($width, $height, $angle) {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 100% - $width;
+		right: 0;
+		bottom: 0;
+		height: $height;
+		width: calc(#{$width} + 2px);
+		background: $mc-white;
+		transform-origin: bottom right;
+		@include transform(skewY(#{$angle})); 
+	}
+}
+
+//--- Grey overlay on pictures
+@mixin grey-overlay() {
+	position: relative;
+	
+	&::before { //--- Grey overlay
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #111;
+		opacity: 0.4;
+	}
+}

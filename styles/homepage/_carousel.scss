@@ -1,0 +1,13 @@
+.homepage-carousel  {
+	min-height: 260px;
+	background: transparent url($img-path+ 'illustration1.png') center center;
+  background-size: cover;
+  
+  @include for-tablet {
+    min-height: 350px;
+  }
+
+  @include for-desktop {
+    min-height: 657px;
+  }
+}

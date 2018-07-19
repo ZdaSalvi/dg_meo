@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: $mc-grey;
+	font-size: $font-size-base;
+	font-weight: normal;
+  background: $mc-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+select,
+input[type='submit'],
+button,
+*[role='button'],
+*[role='tab'] {
+  cursor: pointer;
+}

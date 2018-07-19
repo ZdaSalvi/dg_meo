@@ -1,0 +1,29 @@
+body {
+  border-top: 2px solid $mc-green;
+}
+
+.main-content {
+  max-width: $max-width-container;
+	margin: 0 auto;
+	padding: 0 0 30px;
+
+	@include for-desktop {
+		padding: 0 $gutter-width 30px;
+	}
+}
+
+.title {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  font-weight: 200;
+
+  .highlighted {
+    font-weight: normal;
+  }
+}
+
+.description {
+  font-family: "Titillium Web";
+  @include font-size(17px);
+  line-height: rem(20px);
+}

@@ -1,0 +1,150 @@
+.menu {	
+	.list-item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+
+		.item {        
+			display: flex;
+			align-items: center;
+			text-align: center;
+
+			a {
+				display: block;
+				font-family: "Titillium web";
+				text-transform: uppercase;
+				
+				&:active,
+				&:hover {
+					color: $mc-dark-green;
+				}
+			}
+
+			&:last-of-type {
+				a {
+					padding-right: 0;
+				}
+			}
+		}		
+	}
+}
+
+//--- Menu principal
+.main-menu {
+	display: none;
+
+	@include for-desktop {
+		display: inline-flex;
+		flex-basis: 77%;
+		order: 3;
+
+		@media screen and (max-width: 1215px) {
+			flex-basis: 79%;
+		}
+		
+		.list-item {
+			display: flex;
+			padding-right: 4px;
+		}
+
+		.item {
+			border-left: 1px solid #ccc;
+			
+			a {
+				padding: 0 11px;
+				color: $mc-grey;
+				@include font-size(13px);
+				line-height: 16px;
+
+				@media screen and (max-width: 1215px) {
+					padding: 0 8px;
+					@include font-size(12px);
+				}
+			}		
+		}
+	}
+}
+
+//--- Recherche
+.search {
+	height: $height-secondary-menu;
+	padding: 3px 32px 3px 15px;
+	border: 0;
+	border-bottom: 1px solid #e0e0e0;
+	font-family: "Titillium web";
+	@include font-size(12px);
+	font-style: italic;
+	background: transparent url($img-path + 'icons/icon-search.png') no-repeat center right 14px;
+}
+
+//--- Menu secondaire (contact, espace installateurs, espace prescripteurs...)
+.secondary-menu {
+	display: none;
+
+	@include for-desktop {
+		order: 1;
+		align-self: flex-start;
+		flex-basis: 100%;
+		flex-grow: 0;
+		flex-shrink: 0;
+		text-align: right;
+		display: flex;
+		justify-content: flex-end;
+		height: 0;
+
+		.list-item {
+			min-height: $height-secondary-menu;
+			width: auto;
+			padding-right: 2px;
+			border-bottom: 1px solid #e0e0e0;
+
+			a {
+				position: relative;
+				padding: 2px 15px;
+				color: $sc-grey;
+				@include font-size(10px);
+				line-height: 20px;
+				font-weight: 800;
+		
+				&::before {
+					content: '';
+					display: block;
+					float: left;
+					margin-right: 9px;
+					background: transparent no-repeat center center;
+				}
+		
+				&::after {
+					content:'';
+					display: block;
+					height: 5px;
+					width: 1px;
+					position: absolute;
+					top: calc(50% - 2px);
+					left: 0;
+					background: $mc-light-grey;
+				}
+
+				&.contact {
+					&::before {
+						height: 18px;
+						width: 17px;					
+						background-image: url($img-path + 'icons/icon-contact.png');
+					}
+				}
+
+				&.fitters,
+				&.prescribers {
+					&::before {
+						height: 15px;
+						width: 10px;
+						margin-top: 2px;
+						background-image: url($img-path + 'icons/icon-install.png');
+					}
+				}
+			}
+		}
+	}	
+}

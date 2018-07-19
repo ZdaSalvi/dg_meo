@@ -1,0 +1,46 @@
+.header {
+	display: flex;
+	flex-wrap: wrap;
+  flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+  max-width: $max-width-container;
+  margin: 0 auto;
+	padding: 12px $gutter-width;
+
+	@include for-tablet {
+		min-height: 80px;
+		padding: 14px $gutter-width 12px;
+	}
+	
+	@include for-desktop {
+		min-height: 114px;
+		padding: 0 $gutter-width 18px;
+	}
+}
+
+.logo {
+	flex-basis: 25%;
+	flex-grow: 2;
+	order: 2;
+	
+	img {
+		height: 40px;
+		width: auto;
+	}
+
+	@include for-tablet-and-upper {
+		flex-grow: 0;
+		flex-basis: 25%;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	@include for-desktop {
+		min-height: 75px;
+		flex-basis: 21%;
+	}
+}
